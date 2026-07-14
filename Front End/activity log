@@ -1,0 +1,22 @@
+  /* ---------- Activity log ---------- */
+  function renderActivityLog(main){
+    main.innerHTML = `
+      <h2>Activity Log</h2>
+      <p class="sub">${DATA.activityLog.length} recorded actions — logins, content edits, deletions and uploads.</p>
+      <div class="admin-actions-row"><span></span><button class="admin-add-btn" id="clearLogBtn">Clear Log</button></div>
+      <div id="logListWrap"></div>
+    `;
+    const wrap = document.getElementById('logListWrap');
+    if (!DATA.activityLog.length){ wrap.innerHTML = '<p class="empty-note">No activity recorded yet.</p>'; }
+    else {
+      wrap.innerHTML = DATA.activityLog.map(l => `<div class="log-item"><div class="log-dot"></div><div><div>${l.action}${l.detail?' — '+l.detail:''}</div><div class="log-time">${l.time}</div></div></div>`).join('');
+    }
+    document.getElementById('clearLogBtn').addEventListener('click', async () => {
+      if (!confirm('Clear the entire activity log?')) return;
+      DATA.activityLog = [];
+      await storageSet(STORAGE_KEYS.activityLog, DATA.activityLog);
+      renderAdminCounts();
+      renderActivityLog(main);
+    });
+  }
+

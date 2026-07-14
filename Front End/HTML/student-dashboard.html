@@ -1,0 +1,40 @@
+  <div class="admin-topbar">
+    <div class="brand">
+      <span class="brand-badge">GVC</span>
+      <span class="brand-text">GVC SAINIK<span style="color:var(--sand);">STUDENT DASHBOARD</span></span>
+    </div>
+    <div class="right">
+      <a href="#home" class="icon-btn" title="View site" id="studentViewSite">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </a>
+      <button class="admin-logout" id="studentLogoutBtn">Log Out</button>
+    </div>
+  </div>
+  <div class="admin-body">
+    <div class="admin-main" id="studentMain" style="width:100%;"></div>
+  </div>
+</div>
+
+<!-- ADMISSION FORM OVERLAY -->
+<div class="admin-overlay" id="admissionOverlay">
+  <div class="admin-login-card">
+    <button class="close-x" id="admissionCloseBtn" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="admin-badge-row">
+      <span class="brand-badge">GVC</span>
+      <span class="brand-text" style="color:var(--ink);">ONLINE<span style="color:var(--ink-soft);">Admission Form</span></span>
+    </div>
+    <h3>Apply for Admission</h3>
+    <p class="sub">Submit your details — our team will review and get in touch.</p>
+    <div class="admin-error" id="admissionError"></div>
+    <div class="admin-error" id="admissionSuccess" style="background:rgba(90,140,70,.12); color:#3d6b2c; border-color:rgba(90,140,70,.3);"></div>
+    <form id="admissionForm">
+      <div class="field"><label for="admName">Full Name</label><input id="admName" required></div>
+      <div class="field"><label for="admEmail">Email</label><input id="admEmail" type="email" required></div>
+      <div class="field"><label for="admPhone">Phone</label><input id="admPhone" required></div>
+      <div class="field"><label for="admCourse">Course</label><select id="admCourse"><option value="">Select a course…</option></select></div>
+      <div class="field"><label for="admMsg">Message (optional)</label><textarea id="admMsg" rows="3"></textarea></div>
+      <button type="submit" class="btn btn-gold" style="width:100%;">Submit Application</button>
+    </form>
+  </div>

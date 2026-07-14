@@ -1,0 +1,30 @@
+  <div class="admin-topbar">
+    <div class="brand">
+      <span class="brand-badge">GVC</span>
+      <span class="brand-text">GVC SAINIK<span style="color:var(--sand);">ADMIN DASHBOARD</span></span>
+    </div>
+    <div class="right">
+      <a href="#home" class="icon-btn" title="View site" id="adminViewSite">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </a>
+      <button class="admin-logout" id="adminLogoutBtn">Log Out</button>
+    </div>
+  </div>
+  <div class="admin-body">
+    <div class="admin-sidebar">
+      <button class="admin-tab active" data-tab="overview">Dashboard</button>
+      <button class="admin-tab" data-tab="courses">Courses <span class="count" id="cntCourses">0</span></button>
+      <button class="admin-tab" data-tab="faculty">Faculty <span class="count" id="cntFaculty">0</span></button>
+      <button class="admin-tab" data-tab="selections">Selections <span class="count" id="cntSelections">0</span></button>
+      <button class="admin-tab" data-tab="testimonials">Testimonials <span class="count" id="cntTestimonials">0</span></button>
+      <button class="admin-tab" data-tab="messages">Inquiries <span class="count" id="cntMessages">0</span></button>
+      <button class="admin-tab" data-tab="students">Students <span class="count" id="cntStudents">0</span></button>
+      <button class="admin-tab" data-tab="content">Site Content</button>
+      <button class="admin-tab" data-tab="media">Media Library <span class="count" id="cntMedia">0</span></button>
+      <button class="admin-tab" data-tab="payments">Payments</button>
+      <button class="admin-tab" data-tab="activity">Activity Log <span class="count" id="cntActivity">0</span></button>
+      <button class="admin-tab" data-tab="reports">Reports &amp; Backup</button>
+      <button class="admin-tab" data-tab="settings">Settings</button>
+    </div>
+    <div class="admin-main" id="adminMain"></div>
+  </div>

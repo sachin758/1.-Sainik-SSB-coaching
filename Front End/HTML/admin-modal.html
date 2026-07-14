@@ -1,0 +1,27 @@
+  <div class="admin-login-card">
+    <button class="close-x" id="adminCloseBtn" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="admin-badge-row">
+      <span class="brand-badge">GVC</span>
+      <span class="brand-text" style="color:var(--ink);">ADMIN<span style="color:var(--ink-soft);">Control Panel</span></span>
+    </div>
+    <h3>Sign in to administer</h3>
+    <p class="sub">Manage courses, faculty, selections, testimonials and inquiries for the whole site.</p>
+    <div class="admin-error" id="adminError">Incorrect username or password.</div>
+    <form id="adminLoginForm">
+      <div class="field" id="stepCreds">
+        <label for="adminUser">Username</label><input id="adminUser" type="text" placeholder="admin" required autocomplete="username">
+      </div>
+      <div class="field" id="stepPass">
+        <label for="adminPass">Password</label><input id="adminPass" type="password" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+      <div class="field" id="step2fa" style="display:none;">
+        <label for="admin2fa">6-digit verification code</label>
+        <input id="admin2fa" type="text" inputmode="numeric" maxlength="6" placeholder="123456">
+        <p class="form-note" id="twofaHint"></p>
+      </div>
+      <button type="submit" class="btn btn-gold" style="width:100%;" id="adminLoginBtn">Log In</button>
+    </form>
+    <div class="admin-hint">Demo credentials — admin / gvc2026<br>Note: this is a client-side demo gate for previewing the admin UI. Real authentication (hashed passwords, sessions, CSRF/XSS protection, true 2FA) needs a server-side backend, which this static file cannot provide — the 2FA toggle in Settings is illustrative only.</div>
+  </div>
